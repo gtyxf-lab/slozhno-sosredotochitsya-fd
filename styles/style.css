@@ -2,4 +2,119 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  block-size: 100%;
+  position: relative;
+  background-image: var(--bg-img);
+  background-color: var(--bg-color);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  padding: 10px;
+}
+
+.header::before {
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  justify-self: end;
+}
+
+.header::after {
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  justify-self: start;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  justify-self: start;
+  margin-block-start: 4.0625rem;
+}
+
+.header__text {
+  margin-block-start: 3.4375rem;
+  justify-self: end;
+  align-self: end;
+  margin-block-end: 1.9375rem;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 2.16em;
+}
+
+.header__dark_theme_icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  right: 1em;
+}
+
+.header__dark_theme_icon::before {
+  content: 'REC';
+  color: var(--accent-color);
+  line-height: 1.388em;
+}
+
+.header__dark_theme_icon::after {
+  content: '';
+  block-size: 9px;
+  inline-size: 9px;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  display: block;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.title-decor {
+  color: var(--decor-text-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 12.5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__theme-menu-button {
+  line-height: 100%;
+  text-transform: lowercase;
+  text-align: center;
+  padding-inline: 12.5px;
+  padding-block: 2.25px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+  cursor: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--theme-button-hover-color);
+  cursor: pointer;
 }
