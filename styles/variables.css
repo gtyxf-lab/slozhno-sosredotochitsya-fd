@@ -9,4 +9,10 @@
   --theme-button-hover-color: rgba(255, 0, 112, 0.4);
   --bg-img: url(../images/cover-image-dark.png);
   --bg-color: #000028;
+  --text-color: #F1B2CE;
+  --section-elements-gap: 1.25rem;
+  --gallery-items-gap: 0.625rem;
+  --content-padding: 10px;
+  --main-content-maring-block: 2.5rem;
+  --sections-margin-block: 3.125rem;
 }

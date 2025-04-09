@@ -9,13 +9,14 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  color: var(--text-color);
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, min-content);
-  padding: 10px;
+  padding: var(--content-padding);
 }
 
 .header::before {
@@ -36,12 +37,15 @@
   justify-self: start;
 }
 
-.header__title {
+.heading {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   font-weight: 700;
-  text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--title-color);
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: start;
   margin-block-start: 4.0625rem;
 }
@@ -117,4 +121,87 @@
 .header__theme-menu-button:hover {
   border: 1px solid var(--theme-button-hover-color);
   cursor: pointer;
+}
+
+.content {
+  margin-block: var(--main-content-maring-block);
+}
+
+.content__section {
+  padding-inline: var(--content-padding);
+  margin-block-end: var(--sections-margin-block);
+  display: grid;
+  gap: var(--section-elements-gap);
+}
+
+.content__section:last-of-type {
+  margin-block-end: 0;
+}
+
+.content__section_title {
+  color: var(--accent-color);
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.content__section_subtitle {
+  font-size: inherit;
+  margin-block-end: 0.625rem;
+}
+
+.content__section_slogan {
+  font-weight: 400;
+  margin-block-end: 0.625rem;
+}
+.content__section_link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.no-margin {
+  margin-block-end: 0;
+}
+
+.gallery {
+  --section-elements-gap: var(--gallery-items-gap);
+}
+
+.content__section_gallery {
+  display: grid;
+  gap: var(--gallery-items-gap);
+}
+
+.content__section_gallery-item {
+  inline-size: 100%;
+}
+
+.footer {
+  padding: var(--content-padding);
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  gap: 250px;
+}
+
+.footer::before {
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  justify-self: end;
+}
+
+.footer::after {
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  justify-self: start;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  margin-inline-start: 4px;
+  margin-inline-end: 3px;
 }
