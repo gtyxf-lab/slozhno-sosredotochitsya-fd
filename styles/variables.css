@@ -14,5 +14,14 @@
   --gallery-items-gap: 0.625rem;
   --content-padding: 10px;
   --main-content-maring-block: 2.5rem;
-  --sections-margin-block: 3.125rem;
+  --sections-gap: 3.125rem;
+}
+
+@media (768px <= width < 1024px) {
+  :root {
+    --main-content-maring-block: 3.75rem;
+    --sections-gap: 5rem;
+    --content-padding: 20px;
+    --gallery-items-gap: 1.25rem;
+  }
 }

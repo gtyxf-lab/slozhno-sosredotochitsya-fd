@@ -1,0 +1,59 @@
+@media (768px <= width < 1024px) {
+  .header__title {
+    margin-inline-start: calc(-1 * var(--content-padding));
+  }  
+
+  .header__text {
+    max-inline-size: 364px;
+  }
+
+  .header__dark_theme_icon {
+    right: calc(1em + 10px);
+  }
+
+  .content__section {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: calc(2 * var(--section-elements-gap));
+  }
+
+  .reasons .content__section_text_wrapper {
+    grid-column: span 2;
+  }
+
+  .distractions .content__section_text_wrapper {
+    grid-column: span 3;
+  }
+
+  .tips .content__section_text_wrapper {
+    grid-column: span 2;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery .content__section_subtitle {
+    grid-column: span 3;
+  }
+
+  .content__section_gallery {
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sunset {
+    grid-column: span 2;
+  }
+
+  .ice-cream {
+    grid-row: span 2;
+  }
+  
+  .tape {
+    grid-row: span 2;
+  }
+  
+  .street {
+    grid-column: span 2;
+  }
+}
