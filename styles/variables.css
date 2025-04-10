@@ -5,7 +5,7 @@
 :root {
   --accent-color: #FF0070;
   --title-color: #DB00FF;
-  --decor-text-color: #000028;
+  --decor-color: #FF0070;
   --theme-button-hover-color: rgba(255, 0, 112, 0.4);
   --bg-img: url(../images/cover-image-dark.png);
   --bg-color: #000028;
@@ -15,6 +15,7 @@
   --content-padding: 10px;
   --main-content-maring-block: 2.5rem;
   --sections-gap: 3.125rem;
+  --section-title-color: #000028;
 }
 
 @media (768px <= width < 1024px) {
@@ -22,6 +23,15 @@
     --main-content-maring-block: 3.75rem;
     --sections-gap: 5rem;
     --content-padding: 20px;
+    --gallery-items-gap: 1.25rem;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --content-padding: 20px;
+    --main-content-maring-block: 3.75rem;
+    --sections-gap: 5rem;
     --gallery-items-gap: 1.25rem;
   }
 }
