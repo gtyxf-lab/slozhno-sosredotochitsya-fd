@@ -4,7 +4,7 @@
 */
 :root {
   --accent-color: #FF0070;
-  --title-color: #DB00FF;
+  --logo-color: #DB00FF;
   --decor-color: #FF0070;
   --theme-button-hover-color: rgba(255, 0, 112, 0.4);
   --bg-img: url(../images/cover-image-dark.png);
@@ -15,7 +15,8 @@
   --content-padding: 10px;
   --main-content-maring-block: 2.5rem;
   --sections-gap: 3.125rem;
-  --section-title-color: #000028;
+  --section-title-color: #FF0070;
+  --card__title-color: #000028;
 }
 
 @media (768px <= width < 1024px) {

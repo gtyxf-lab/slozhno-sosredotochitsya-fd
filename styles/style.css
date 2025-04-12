@@ -1,66 +1,66 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  block-size: 100%;
   position: relative;
-  background-image: var(--bg-img);
+  color: var(--text-color);
   background-color: var(--bg-color);
-  background-attachment: fixed;
+  background-image: var(--bg-img);
   background-position: center;
   background-size: cover;
-  color: var(--text-color);
+  background-attachment: fixed;
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  block-size: 100%;
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
   justify-content: space-between;
-  padding: var(--content-padding);
   height: 100vh;
   min-height: 668px;
-  position: relative;
+  padding: var(--content-padding);
 }
 
 .decorations::before {
   content: '';
-  block-size: 25px;
-  inline-size: 25px;
-  border-inline-end: 1px solid var(--decor-color);
-  border-block-start: 1px solid var(--decor-color);
+  position: absolute;
   justify-self: end;
   margin-inline-end: var(--content-padding);
   margin-block-start: var(--content-padding);
-  position: absolute;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  block-size: 25px;
+  inline-size: 25px;
 }
 
 .decorations::after {
   content: '';
-  block-size: 25px;
-  inline-size: 25px;
-  border-inline-start: 1px solid var(--decor-color);
-  border-block-end: 1px solid var(--decor-color);
+  position: absolute;
   justify-self: start;
   align-self: end;
-  position: absolute;
   margin-inline-start: var(--content-padding);
   margin-block-end: var(--content-padding);
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+  block-size: 25px;
+  inline-size: 25px;
 }
 
 .heading {
+  color: var(--logo-color);
+  font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  font-weight: 700;
-  color: var(--title-color);
 }
 
 .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
   align-self: start;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.header__text {
+.header__subtitle {
   justify-self: end;
   align-self: center;
   max-inline-size: 355px;
@@ -73,11 +73,11 @@
 
 .header__dark_theme_icon {
   position: absolute;
+  top: var(--content-padding);
+  right: 1em;
   display: flex;
   align-items: center;
   gap: 10px;
-  top: var(--content-padding);
-  right: 1em;
 }
 
 .header__dark_theme_icon::before {
@@ -88,38 +88,38 @@
 
 .header__dark_theme_icon::after {
   content: '';
-  block-size: 9px;
-  inline-size: 9px;
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
   display: block;
   border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
   background-color: var(--accent-color);
+  block-size: 9px;
+  inline-size: 9px;
 }
 
 .title-decor {
-  color: var(--section-title-color);
-  background-color: var(--accent-color);
+  color: var(--card__title-color);
   font-weight: 700;
+  background-color: var(--accent-color);
 }
 
 .header__theme-menu-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: 12.5px;
   justify-content: space-between;
   align-items: center;
+  gap: 12.5px;
 }
 
 .header__theme-menu-button {
-  line-height: 100%;
-  text-transform: lowercase;
-  text-align: center;
+  border: 1px solid transparent;
   padding-inline: 12.5px;
   padding-block: 2.25px;
-  border: 1px solid transparent;
-  background: transparent;
   color: var(--decor-color);
+  line-height: 100%;
+  text-align: center;
+  text-transform: lowercase;
+  background: transparent;
 }
 
 .header__theme-menu-button:focus {
@@ -132,8 +132,8 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--decor-color);
-  pointer-events: none;
   cursor: none;
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -142,36 +142,36 @@
 }
 
 .content {
-  margin-block: var(--main-content-maring-block);
   display: grid;
   gap: var(--sections-gap);
+  margin-block: var(--main-content-maring-block);
 }
 
 .content__section {
-  padding-inline: var(--content-padding);
   display: grid;
   gap: var(--section-elements-gap);
+  padding-inline: var(--content-padding);
 }
 
 .content__section_title {
   color: var(--section-title-color);
-  font-size: inherit;
   font-weight: 700;
+  font-size: inherit;
 }
 
-.content__section_text_wrapper {
+.content__section_wrapper {
   display: grid;
   gap: var(--section-elements-gap);
 }
 
-.content__section_subtitle {
-  font-size: inherit;
+.card__title {
   margin-block-end: 0.625rem;
+  font-size: inherit;
 }
 
 .content__section_slogan {
-  font-weight: 400;
   margin-block-end: 0.625rem;
+  font-weight: 400;
 }
 
 .content__section_link {
@@ -188,7 +188,7 @@
 }
 
 .content__section_link:focus-visible {
-  border: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color);
 }
 
 .no-margin {
@@ -205,24 +205,24 @@
 }
 
 .content__section_gallery-item {
-  inline-size: 100%;
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .footer {
-  padding: var(--content-padding);
+  position: relative;
+  display: grid;
   height: 100vh;
   min-height: 668px;
-  display: grid;
-  position: relative;
+  padding: var(--content-padding);
 }
 
 .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
+  align-self: center;
   margin-inline-start: 4px;
   margin-inline-end: 3px;
-  align-self: center;
-  justify-self: center;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

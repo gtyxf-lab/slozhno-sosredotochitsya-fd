@@ -7,14 +7,14 @@
 }
 
 body {
+  margin: 0 auto;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3em;
   min-inline-size: 375px;
   max-inline-size: 1440px;
   min-block-size: 668px;
-  margin: 0 auto;
-  font-family: 'IBM Plex mono', serif;
-  font-size: 18px;
-  line-height: 1.3em;
-  font-weight: 400;
 }
 
 h1,
@@ -40,6 +40,8 @@ picture {
 
 button,
 a {
+  border: 0;
+  border-radius: 0;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
@@ -47,6 +49,4 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 0;
-  border-radius: 0;
 }
