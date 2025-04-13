@@ -71,7 +71,7 @@
   align-self: center;
 }
 
-.header__dark_theme_icon {
+.header__icon {
   position: absolute;
   top: var(--content-padding);
   right: 1em;
@@ -80,13 +80,13 @@
   gap: 10px;
 }
 
-.header__dark_theme_icon::before {
+.header__icon::before {
   content: 'REC';
   color: var(--accent-color);
   line-height: 1.388em;
 }
 
-.header__dark_theme_icon::after {
+.header__icon::after {
   content: '';
   display: block;
   border-radius: 50%;
@@ -127,7 +127,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--decor-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
@@ -165,8 +165,16 @@
 }
 
 .card__title {
-  margin-block-end: 0.625rem;
   font-size: inherit;
+}
+
+.card__text {
+  margin-block-start: 0.625rem;
+}
+
+.slogan_list {
+  display: grid;
+  gap: var(--section-elements-gap);
 }
 
 .content__section_slogan {

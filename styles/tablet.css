@@ -15,7 +15,7 @@
     min-block-size: 1024px;
   }
 
-  .header__dark_theme_icon {
+  .header__icon {
     right: calc(1em + 10px);
   }
 

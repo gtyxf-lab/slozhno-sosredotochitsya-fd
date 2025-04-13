@@ -11,7 +11,7 @@
 }
 
 .theme-light .page {
-  .header__dark_theme_icon {
+  .header__icon {
     display: none;
   }
 
@@ -31,7 +31,7 @@
     --card__title-color: #353430;
   }
   
-  .header__dark_theme_icon {
+  .header__icon {
     display: none;
   }
 }
